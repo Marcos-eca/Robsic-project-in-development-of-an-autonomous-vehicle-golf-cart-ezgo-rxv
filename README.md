@@ -27,7 +27,7 @@ chmod +x gofinho.sh
 chmod +x teleop.sh
 ./teleop.sh
 ```
-## Carrinho invisivel (gazebo)
+## Carrinho invisível (gazebo)
 
 Caso o carrinho não esteja aparencendo no ambiente gazebo, vá em "src/golfinho_model/model/golfinho_cartographer". Dentro  desta pasta está um arquivo sdf (model.sdf). Troque nas linhas "<uri>adrees.dae</uri>" (localiza os arquivos do modelo visual do carrinho de extensão .dae)  o trecho  do endereço "/home/robsic" pelo endereço
 fornecido pelo terminal ao digitar Crtl-Alt-T e escrever a seguinte linha de comando:
