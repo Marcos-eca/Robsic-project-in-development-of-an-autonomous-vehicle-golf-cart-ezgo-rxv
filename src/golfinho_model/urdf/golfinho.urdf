@@ -1,0 +1,705 @@
+<?xml version="1.0"?>
+
+<robot name="golfinho">
+  
+  <!-- ***************** -->
+  <!--      Links        -->
+  <!-- ***************** -->
+  
+  <!-- ***************** -->
+  <!--       Base        -->
+  <!-- ***************** -->
+  
+ <link name='base_link'>
+   
+      <inertial>
+        <mass value="320"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="9.60267" ixy="0" ixz="0" iyy="74.37333333" iyz="0" izz="83.97066667"/>
+      </inertial>
+      
+      <collision name='collision'>
+        <geometry>
+            <box size="1 0.05 0.01"/>
+	 </geometry>
+      </collision>
+
+      <visual name='visual_0'>
+       <origin rpy="0 -0 1.5708" xyz="-0.08 0 -0.2"/>
+        <geometry>
+          <mesh filename="file:///$(find golfinho_model)/meshes/base_link.dae" scale="0.98 0.85 0.9"/>   
+        </geometry>
+      </visual>
+    </link>
+
+  <!-- ***************** -->
+  <!--      Whells       -->
+  <!-- ***************** -->
+    
+  <!-- ***************** -->
+  <!--       Left        -->
+  <!-- ***************** -->
+    <link name='front_left_wheel'>
+      <inertial>
+        <mass value="37.37513510"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="0.59761284" ixy="0" ixz="0" iyy="0.59761284" iyz="0" izz="0.94605811"/>
+      </inertial>
+
+      <collision name='front_left_wheel_collision'>
+        <geometry>
+          <cylinder length="0.6" radius="0.225"/>
+	 </geometry>
+      </collision>
+
+      <visual name='front_left_wheel_visual_0'>
+       <origin rpy="-1.570800 0 0" xyz="0 -0.380000 0"/>
+         <geometry>
+             <mesh filename="file:///$(find golfinho_model)/meshes/wheel_.dae"  scale="0.13 0.08 0.13"/>
+         </geometry>
+      </visual>
+    </link>
+  
+  
+   <link name="front_left_mount">
+     <inertial>
+        <mass value="0.00064182"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="2.11e-06" ixy="0" ixz="0" iyy="2.11e-06" iyz="0" izz="2.7e-07"/>
+      </inertial>
+   
+      <collision name='front_left_mount_collision'>
+        <geometry>
+           <cylinder length="0.072407" radius="0.115000"/>
+	 </geometry>
+      </collision>
+
+    <visual name='front_left_mount_visual'>
+        <geometry>
+            <cylinder length="0.0001" radius="0.0001"/>
+	 </geometry>
+       <origin rpy="1.5708 0 0" xyz="0 0 0"/>
+    </visual>
+   </link>
+   
+  <!-- ***************** -->
+  <!--       Right       -->
+  <!-- ***************** -->
+  
+  <link name='front_right_wheel'>  
+      <inertial>
+        <mass value="37.37513510"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="0.59761284" ixy="0" ixz="0" iyy="0.59761284" iyz="0" izz="0.94605811"/>
+      </inertial>
+      
+      <collision name='front_right_wheel_collision'>
+        <geometry>
+          <cylinder length="0.6" radius="0.225"/>
+	 </geometry>
+      </collision>
+
+
+      <visual name='front_right_wheel_visual_0'>
+          <origin rpy="1.570800 0 0" xyz="0 0.380000 0"/>
+         <geometry>
+           <mesh filename="file:///$(find golfinho_model)/meshes/wheel_.dae"  scale="0.13 0.08 0.13"/>
+         </geometry>
+      </visual>
+  </link>
+
+
+  <link name="front_right_mount">
+     <inertial>
+        <mass value="0.00064182"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="2.11e-06" ixy="0" ixz="0" iyy="2.11e-06" iyz="0" izz="2.7e-07"/>
+      </inertial>
+
+      <collision name='front_right_mount_collision'>
+        <geometry>
+          <cylinder length="0.072407" radius="0.115000"/>
+	 </geometry>
+      </collision>
+
+    <visual name='front_right_mount_visual'>
+        <geometry>
+          <cylinder length="0.0001" radius="0.0001"/>
+	 </geometry>
+       <origin rpy="1.5708 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+ 
+  <!-- ***************** -->
+  <!--       Back        -->
+  <!-- ***************** -->
+  <!-- ***************** -->
+  <!--       Left       -->
+  <!-- ***************** -->
+
+
+<link name='back_left_wheel'>    
+      <inertial>
+        <mass value="37.37513510"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="0.59761284" ixy="0" ixz="0" iyy="0.59761284" iyz="0" izz="0.94605811"/>
+      </inertial>
+
+      <collision name='back_left_wheel_collision'>
+        <geometry>
+          <cylinder length="0.6" radius="0.225"/>
+	 </geometry>
+      </collision>
+
+
+      <visual name='back_left_wheel_visual_0'>
+       <origin rpy="1.570800 0 0" xyz="0 0.380000 0"/>
+         <geometry>
+           <mesh filename="file:///$(find golfinho_model)/meshes/wheel_.dae"  scale="0.13 0.08 0.13"/>
+         </geometry>
+      </visual> 
+</link>
+
+  <!-- ***************** -->
+  <!--       Right       -->
+  <!-- ***************** -->
+
+<link name='back_right_wheel'> 
+      <inertial>
+        <mass value="37.37513510"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="0.59761284" ixy="0" ixz="0" iyy="0.59761284" iyz="0" izz="0.94605811"/>
+      </inertial>
+
+      <collision name='back_right_wheel_collision'>
+        <geometry>
+          <cylinder length="0.6" radius="0.225"/>
+	 </geometry>
+      </collision>
+ 
+       <visual name='back_left_wheel_visual_0'>
+       <origin rpy="-1.570800 0 0" xyz="0 -0.380000 0"/>
+         <geometry>
+           <mesh filename="file:///$(find golfinho_model)/meshes/wheel_.dae"  scale="0.13 0.08 0.13"/>
+         </geometry>
+      </visual>
+ </link>
+
+
+  <!-- ***************** -->
+  <!--    steering       -->
+  <!-- ***************** -->
+  
+<link name='steering'>
+      <inertial>
+        <mass value="0.00016233"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="6e-08" ixy="0" ixz="0" iyy="6e-08" iyz="0" izz="8e-08"/>
+      </inertial>
+
+      <collision name='collision'>
+         <origin rpy="0 0 0" xyz="-0.012 -0.01 -0.04"/>
+         <geometry>
+          <cylinder length="0.0001" radius="0.0001"/>
+	 </geometry>
+      </collision>
+
+     <visual name='visual'>
+        <origin rpy="1.4108 0 0" xyz="0 0 -0.07"/>
+        <geometry>
+           <mesh filename="file:///$(find golfinho_model)/meshes/steering.dae"  scale="0.1 0.1 0.1"/>
+	</geometry>
+     </visual>
+</link>
+
+  <!-- ***************** -->
+  <!--    Laser's        -->
+  <!-- ***************** -->
+
+  <!-- ***************** -->
+  <!--    Four layer     -->
+  <!-- ***************** -->
+
+  <!-- ***************** -->
+  <!--       front       -->
+  <!-- ***************** -->
+<link name='four_layer_laser'>
+      <inertial>
+        <mass value="0.00106532"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="1.69e-06" ixy="0" ixz="0" iyy="2.35e-06" iyz="0" izz="3.52e-06"/>
+      </inertial>
+      
+      <visual name='visual_link_r'>
+        <origin rpy="0 0 0" xyz="-0.05 0 -0.07"/>
+       <geometry>
+         <mesh filename="file:///$(find golfinho_model)/meshes/sick_4camadas.dae"  scale="0.05 0.05 0.05"/>
+        </geometry>
+      </visual>
+</link>
+
+
+
+  <!-- ***************** -->
+  <!--    one layer      -->
+  <!-- ***************** -->
+
+  <!-- ***************** -->
+  <!--      left         -->
+  <!-- ***************** -->
+
+
+<link name='laser_link_left'>
+      <inertial>
+        <mass value="0.00106532"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="1.69e-06" ixy="0" ixz="0" iyy="2.35e-06" iyz="0" izz="3.52e-06"/>
+      </inertial>
+      
+     <visual name='visual_link_l'>
+       <origin rpy="0 -0 0.7854" xyz="0.0 0 -0.12"/>
+       <geometry>
+        <mesh filename="file:///$(find golfinho_model)/meshes/sick_270.dae"  scale="0.0005 0.0005 0.0005"/>
+       </geometry>
+     </visual>
+      
+      <collision name='collision_link_l'>
+        <geometry>
+         <box size="0.153353 0.126857 0.054761"/>
+        </geometry>
+      </collision>
+</link>
+
+
+  <!-- ***************** -->
+  <!--      right        -->
+  <!-- ***************** -->
+
+<link name='laser_link_right'>
+       <inertial>
+        <mass value="0.00106532"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="1.69e-06" ixy="0" ixz="0" iyy="2.35e-06" iyz="0" izz="3.52e-06"/>
+      </inertial>
+      
+     <visual name='visual_link_r'>
+       <origin rpy="0 -0 -0.7854" xyz="0 0 -0.12"/>
+       <geometry>
+        <mesh filename="$(find golfinho_model)/meshes/sick_270.dae"  scale="0.0005 0.0005 0.0005"/>
+       </geometry>
+      </visual>
+      
+      <collision name='collision_link_r'>
+        <geometry>
+         <box size="0.153353 0.126857 0.054761"/>
+        </geometry>
+      </collision>
+</link>
+
+  <!-- ***************** -->
+  <!--      câmera        -->
+  <!-- ***************** -->
+
+<link name='camera_link'>
+      <inertial>
+        <mass value="0.00106532"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="1.69e-06" ixy="0" ixz="0" iyy="2.35e-06" iyz="0" izz="3.52e-06"/>
+      </inertial>      
+   
+     <visual name='visual'>
+       <geometry>
+        <box size="0.01 0.01 0.01"/>
+        </geometry>
+     </visual>
+   
+      <collision name='collision'>
+        <geometry>
+            <box size="0.01 0.01 0.01"/>
+        </geometry>
+      </collision>
+</link>
+
+
+
+
+
+
+  <!-- ***************** -->
+  <!--      Joints       -->
+  <!-- ***************** -->
+    
+
+<joint name="steering_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="steering"/>
+    <axis xyz="0 0 -1"/>
+    <origin rpy="1e-06 -0.872602 -6.8e-05" xyz=" 0.194763 0.27693 0.818981"/>
+</joint>
+    
+    
+<joint name="front_left_wheel_joint" type="continuous">
+      <parent link="front_left_mount"/>
+     <child link="front_left_wheel"/>
+     <axis xyz="0 0 1"/>
+     <origin rpy="0 0 0"  xyz="0.0 0.0 0.0"/>
+</joint>
+  
+<joint name="front_left_mount_joint" type="continuous">
+      <parent link="base_link"/>
+     <child link="front_left_mount"/>
+     <axis xyz="0 -1 0"/>
+     <origin rpy="-1.5708 0 0" xyz="0.835 0.45 0.0"/>
+</joint>
+    
+<joint name="front_right_wheel_joint" type="continuous">
+      <parent link="front_right_mount"/>
+      <child link="front_right_wheel"/>
+      <axis xyz="0 0 1"/>
+      <origin rpy="0 0 0"  xyz="0.0 0.0 0.0"/>
+</joint>
+ 
+ 
+<joint name="front_right_mount_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="front_right_mount"/>
+      <axis xyz="0 -1 0"/>
+      <origin rpy="-1.5708 0 0" xyz="0.835 -0.45 0.0"/>
+</joint>
+
+
+<joint name="back_left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="back_left_wheel"/>
+    <axis xyz="0 0 1"/>
+    <origin rpy="-1.5708 0 0"  xyz="-0.835 0.485 0.0"/>
+</joint>
+
+ <joint name="back_right_wheel_joint" type="continuous">
+     <parent link="base_link"/>
+     <child link="back_right_wheel"/>
+     <axis xyz="0 0 1"/>
+     <origin rpy="-1.5708 0 0"  xyz="-0.835 -0.485 0.0"/>
+</joint>
+    
+    
+    
+  <!-- ***************** -->
+  <!--  Suport Lasers    -->
+  <!-- ***************** -->
+    
+    
+
+
+<joint name="laser_suport" type="fixed">
+    <parent link="base_link"/>
+    <child link="four_layer_laser"/>
+    <origin xyz="1.05 0 0.1"/>
+</joint>
+
+
+<joint name="laser_suport_left" type="fixed">
+     <parent link="base_link"/>
+     <child link="laser_link_left"/>
+     <origin xyz="0.68 0.55 0.71"/>
+</joint>
+
+
+<joint name="laser_suport_right" type="fixed">
+     <parent link="base_link"/>
+     <child link="laser_link_right"/>
+     <origin xyz="0.68 -0.55 0.71"/>
+</joint>
+
+<joint name="camera_front" type="fixed">
+     <parent link="base_link"/>
+     <child link="camera_link"/>
+     <origin xyz="0.4 0 1.4"/>
+</joint>
+
+ <link name="camera_link_optical"/>
+
+<joint name="camera_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="camera_link"/>
+    <child link="camera_link_optical"/>
+</joint>
+
+
+
+
+
+  <!-- *********************** IMU SETUP *********************************  -->
+  <!-- Each sensor must be attached to a link.                              --> 
+
+  <link name="imu_link"/>
+
+<joint name="imu_link_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="imu_link" />
+    <origin xyz="-0.10 0 0.05"  rpy="0 -1.9 0" />  <!--<origin xyz="0 0 0" rpy="-0.04 -0.25 0.2" />  -0.2 0.15-->  <!-- -0.15-->
+  </joint>
+
+
+  <!-- *********************** GPS SETUP **********************************  -->
+  <link name="gps_link"/>
+  
+  <joint name="gps_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="gps_link"/>
+    <origin xyz="0.10 0 0.05" rpy="0 0 0"/>
+  </joint>
+
+  
+
+ 
+ 
+ 
+  <!-- **************************** -->
+  <!--     material properties      -->
+  <!-- **************************** -->
+  
+      <gazebo reference="front_left_wheel">
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      </gazebo>
+ 
+     <gazebo reference="front_right_wheel">
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      </gazebo>
+ 
+      <gazebo reference="back_left_wheel">
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      </gazebo>
+ 
+ 
+     <gazebo reference="back_right_wheel">
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      </gazebo>
+ 
+      <gazebo reference="front_left_mount">
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      </gazebo>  
+ 
+      <gazebo reference="front_right_mount">
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      </gazebo>
+ 
+ 
+ 
+ 
+ 
+  <!-- ***************** -->
+  <!--      Plugins      -->
+  <!-- ***************** -->
+
+
+  <!-- ************************* -->
+  <!--       four layer Laser    -->
+  <!-- ************************* -->
+
+
+<gazebo reference="four_layer_laser">
+  <sensor type="ray" name="block_laser_sensor">
+        <always_on>true</always_on>
+        <visualize>true</visualize>
+            <update_rate>5</update_rate>
+    <ray>
+      <scan>
+        <horizontal>
+          <samples>200</samples>
+          <resolution>1</resolution>
+          <min_angle>-0.9</min_angle>
+          <max_angle>0.9</max_angle>
+        </horizontal>
+      </scan>
+      <range>
+        <min>0.10</min>
+        <max>10</max>
+        <resolution>0.01</resolution>
+      </range>
+    </ray>
+
+    <plugin name="gazebo_ros_block_laser_controller" filename="libgazebo_ros_ray_sensor.so">
+    
+         <ros>
+          <remapping>~/out:=scan</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+              <topicName>scan</topicName>
+        <frame_name>four_layer_laser</frame_name>
+      
+    </plugin>
+  </sensor>
+</gazebo>
+
+
+  
+  <!--  Odometria   -->
+  <!--  Odometria   -->
+  <!--  Odometria   -->
+  <!--  Odometria   -->
+  <!--  Odometria   -->
+  <!--  Odometria   -->
+            
+  <gazebo>
+   
+    <plugin filename="libgazebo_ros_ackermann_drive.so" name="ackermann_drive">
+      <update_rate>100.0</update_rate>
+      <!-- wheels -->
+      <front_left_joint>front_left_wheel_joint</front_left_joint>
+      <front_right_joint>front_right_wheel_joint</front_right_joint>
+      <rear_left_joint>back_left_wheel_joint</rear_left_joint>
+      <rear_right_joint>back_right_wheel_joint</rear_right_joint>
+      <left_steering_joint>front_left_mount_joint</left_steering_joint>
+      <right_steering_joint>front_right_mount_joint</right_steering_joint>
+      <steering_wheel_joint>steering_joint</steering_wheel_joint>
+      <max_steer>0.523</max_steer>
+      <max_steering_angle>9.42</max_steering_angle>
+      <max_speed>20</max_speed>
+      <left_steering_pid_gain>6000 0 1</left_steering_pid_gain>
+      <left_steering_i_range>0 0</left_steering_i_range>
+      <right_steering_pid_gain>6000 0 1</right_steering_pid_gain>
+      <right_steering_i_range>0 0</right_steering_i_range>
+      <linear_velocity_pid_gain>1000 0 1</linear_velocity_pid_gain>
+      <linear_velocity_i_range>0 0</linear_velocity_i_range>
+      <!-- output -->
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+      <publish_distance>true</publish_distance>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+        <ros>
+               <remapping>odom:=wheel/odometry</remapping>
+        </ros>
+    </plugin>
+  </gazebo>
+
+
+  <gazebo reference="imu_link">
+    <gravity>true</gravity>
+    <sensor name="twr_imu" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <imu>
+        <orientation>
+          <x>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>2e-3</stddev>
+            </noise>
+          </x>
+          <y>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>2e-3</stddev>
+            </noise>
+          </y>
+          <z>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>2e-3</stddev>
+            </noise>
+          </z>
+        </orientation>
+        <angular_velocity>
+          <x>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>2e-4</stddev>
+            </noise>
+          </x>
+          <y>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>2e-4</stddev>
+            </noise>
+          </y>
+          <z>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>2e-4</stddev>
+            </noise>
+          </z>
+        </angular_velocity>
+        <linear_acceleration>
+          <x>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>1.7e-2</stddev>
+            </noise>
+          </x>
+          <y>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>1.7e-2</stddev>
+            </noise>
+          </y>
+          <z>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>1.7e-2</stddev>
+            </noise>
+          </z>
+        </linear_acceleration>
+      </imu>
+      <plugin name="two_wheeled_robot_imu" filename="libgazebo_ros_imu_sensor.so">
+        <initial_orientation_as_reference>false</initial_orientation_as_reference>
+        <frame_name>imu_link</frame_name>
+          <ros>
+               <!--argument>~/out:=imu</argument-->
+                
+          <namespace>/imu</namespace>
+          <remapping>~/out:=data</remapping>
+          </ros>
+      </plugin>
+    </sensor>
+</gazebo>
+
+
+   <plugin name="gazebo_ros_joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+        <ros>
+           <remapping>~/out:=joint_states</remapping>
+       </ros>
+          <update_rate>30</update_rate>
+         <joint_name>back_right_wheel_joint</joint_name>
+         <joint_name>back_left_wheel_joint</joint_name>
+      </plugin>
+      
+ 
+  <gazebo reference="gps_link">
+    <sensor name="golfinho_gps" type="gps">
+      <always_on>true</always_on>
+      <update_rate>10.0</update_rate>
+      <gps>
+        <position_sensing>
+          <horizontal>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>1e-2</stddev>
+            </noise>
+          </horizontal>
+          <vertical>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>1</stddev>
+            </noise>
+          </vertical>
+        </position_sensing>
+      </gps>
+      <plugin name="robot_golfinho_gps" filename="libgazebo_ros_gps_sensor.so">
+        <ros>
+          <remapping>~/out:=gps/fix</remapping>
+        </ros>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>
