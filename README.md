@@ -1,20 +1,29 @@
 # Golfinho (Cart golf)
 
-## Simulação
+## Simulação 1
+ 
+- Gazebo e Rviz
 
-- Gazebo
+<p align="center" width="100%">
+  <img width="45%" src="image/golfinho_gazebo.png">
+  <img width="45%" src="image/golfinho_rviz.png">
+</p>
 
-![Descrição do código](image/golfinho_gazebo.png)
+## Simulação 2
+ 
+- Gazebo e Rviz
 
-- Rviz
+<p align="center" width="100%">
+  <img width="45%" src="image/map_city.png">
+  <img width="45%" src="image/map_city_1.png">
+</p>
 
-![Descrição do código](image/golfinho_rviz.png)
 
 - Frames id 
 
 ![Descrição do código](image/frames-1.png)
 
-- Nós  
+- Nós  e tópicos
 
 ![Descrição do código](image/golfinho_cartographer.png)
 
