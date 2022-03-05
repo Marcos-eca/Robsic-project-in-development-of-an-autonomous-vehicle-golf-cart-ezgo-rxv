@@ -1,4 +1,0 @@
-As pastas associadas ao modelo, design do veiculo estão localizados:
-- meshes (software de modelagem)
-- models (software de modelagem) de natureza sdf
-- construção física do veículos seguindo a estrutura do urdf

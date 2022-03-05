@@ -1,6 +1,0 @@
-Problemas no cartographer
-
-
-
-Error:   TF SELF_TRANSFORM: Ignoring transform from authority "Authority undetectable" with frame_id and child_frame_id  "odom" because they are the same
-
