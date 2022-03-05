@@ -4,11 +4,20 @@
 
 - Gazebo
 
-![Descrição do código](golfinho_gazebo.png)
+![Descrição do código](image/golfinho_gazebo.png)
 
 - Rviz
 
-![Descrição do código](golfinho_rviz.png)
+![Descrição do código](image/golfinho_rviz.png)
+
+- Frames id 
+
+![Descrição do código](image/frames-1.png)
+
+- Nós  
+
+![Descrição do código](image/golfinho_cartographer.png)
+
 
 ## Executando o arquivo de simulação
 
