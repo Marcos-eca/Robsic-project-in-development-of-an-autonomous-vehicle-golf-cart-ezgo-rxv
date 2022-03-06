@@ -30,6 +30,11 @@
 
 ## Executando o arquivo de simulação
 
+* Instale o pacote cartographer:
+```
+sudo apt install ros-foxy-cartographer 
+```
+
 * O código abaixo gera uma pasta , clona o repositorio e execulta a simulação:
   
 ```
