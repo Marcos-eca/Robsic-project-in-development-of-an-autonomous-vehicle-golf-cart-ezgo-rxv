@@ -38,9 +38,8 @@ sudo apt install ros-foxy-cartographer
 * O código abaixo gera uma pasta , clona o repositorio e execulta a simulação:
   
 ```
-mkdir -p ~/Robsic_golfinho/
-cd ~/Robsic_golfinho/
 git clone https://github.com/Marcos-eca/Robsic-project-in-development-of-an-autonomous-vehicle-golf-cart-ezgo-rxv.git
+cd ~/Robsic-project-in-development-of-an-autonomous-vehicle-golf-cart-ezgo-rxv/
 chmod +x gofinho.sh
 ./golfinho.sh
 ```
