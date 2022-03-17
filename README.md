@@ -39,9 +39,9 @@ sudo apt install ros-foxy-cartographer
   
 ```
 git clone https://github.com/Marcos-eca/Robsic-project-in-development-of-an-autonomous-vehicle-golf-cart-ezgo-rxv.git
-cd ~/Robsic-project-in-development-of-an-autonomous-vehicle-golf-cart-ezgo-rxv/
-chmod +x gofinho.sh
-./golfinho.sh
+cd ~/golfinho
+chmod +x depend.sh && ./depend.sh
+chmod +x gofinho.sh && ./golfinho.sh
 ```
 * Para executar outros arquivos .sh  basta utilizar o comando "chmod +x arquive.sh" e depois ./arquive.sh para executar o arquivo.
 ```
